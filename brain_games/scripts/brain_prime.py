@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.cli import start
+from brain_games.handler_func import run
 
 
 def get_correct_ans_prime():
@@ -18,7 +18,7 @@ def get_correct_ans_prime():
 
 def main():
     the_game = "Answer 'yes' if given number is prime. Otherwise answer 'no'."
-    start(the_game, get_correct_ans_prime)
+    run(the_game, get_correct_ans_prime)
 
 
 if __name__ == '__main__':

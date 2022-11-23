@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.cli import start
+from brain_games.handler_func import run
 
 
 def get_correct_ans_progression():
@@ -14,7 +14,7 @@ def get_correct_ans_progression():
 
 def main():
     the_game = "What number is missing in the progression?"
-    start(the_game, get_correct_ans_progression)
+    run(the_game, get_correct_ans_progression)
 
 
 if __name__ == '__main__':

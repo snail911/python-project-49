@@ -1,6 +1,6 @@
 from random import randint, choice
 import operator
-from brain_games.cli import start
+from brain_games.handler_func import run
 
 
 def get_correct_ans_calc():
@@ -14,7 +14,7 @@ def get_correct_ans_calc():
 
 def main():
     the_game = 'What is the result of the expression?'
-    start(the_game,get_correct_ans_calc)
+    run(the_game,get_correct_ans_calc)
 
 
 if __name__ == '__main__':

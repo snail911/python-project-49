@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.cli import start
+from brain_games.handler_func import run
 
 
 def get_correct_ans_gcd():
@@ -16,7 +16,7 @@ def get_correct_ans_gcd():
 
 def main():
     the_game = "Find the greatest common divisor of given numbers."
-    start(the_game, get_correct_ans_gcd)
+    run(the_game, get_correct_ans_gcd)
 
 
 if __name__ == '__main__':
