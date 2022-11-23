@@ -1,4 +1,3 @@
-import prompt
 from random import randint, choice
 import operator
 from brain_games.cli import start
