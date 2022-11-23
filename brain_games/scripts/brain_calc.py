@@ -1,20 +1,18 @@
-from random import randint, choice
-import operator
-from brain_games.handler_func import run
+#!/usr/bin/env python3
 
+"""The scripts start the game 'Brain-calc'."""
 
-def get_correct_ans_calc():
-    rand_num1, rand_num2 = randint(1, 100), randint(1, 100)
-    operations = {'-': operator.sub, '+': operator.add, '*': operator.mul, '/': operator.truediv}
-    rand_operation = choice([x for x in operations.keys()])
-    question = f'{rand_num1} {rand_operation} {rand_num2}'
-    correct_answer = str(round(operations[rand_operation](rand_num1, rand_num2),3))
-    return question,correct_answer
+from brain_games.engine import engine
+from brain_games.games import brain_calc
 
 
 def main():
-    the_game = 'What is the result of the expression?'
-    run(the_game,get_correct_ans_calc)
+    """
+    Program start.
+    Parameters are missing.
+    Returns: None
+    """
+    engine(brain_calc)
 
 
 if __name__ == '__main__':

@@ -1,24 +1,18 @@
-from random import randint
-from brain_games.handler_func import run
+#!/usr/bin/env python
 
+"""The scripts start the game 'Brain-prime'"""
 
-def get_correct_ans_prime():
-    question = randint(1, 100)
-    correct_ans = 'no'
-    list_of_nums = []
-    if question != 1:
-        for i in range(2, question + 1):
-            if question % i == 0 and i != question:
-                return question, correct_ans
-        correct_ans = 'yes'
-        return question, correct_ans
-    else:
-        return question, correct_ans
+from brain_games.engine import engine
+from brain_games.games import prime_number
 
 
 def main():
-    the_game = "Answer 'yes' if given number is prime. Otherwise answer 'no'."
-    run(the_game, get_correct_ans_prime)
+    """
+    Program start.
+    Parameters are missing.
+    Returns: None
+    """
+    engine(prime_number)
 
 
 if __name__ == '__main__':

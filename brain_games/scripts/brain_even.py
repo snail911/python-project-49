@@ -1,15 +1,18 @@
-from random import randint
-from brain_games.handler_func import run
+#!/usr/bin/env python3
 
-def get_correct_ans_even():
-    question = randint(1, 100)
-    correct_answer = 'yes' if question % 2 == 0 else 'no'
-    return question,correct_answer
+"""The scripts start the game 'Brain-even'."""
+
+from brain_games.engine import engine
+from brain_games.games import even_number
 
 
 def main():
-    the_game = "Answer 'yes' if the number is even, otherwise answer 'no'"
-    run(the_game, get_correct_ans_even)
+    """
+    Program start.
+    Parameters are missing.
+    Returns: None
+    """
+    engine(even_number)
 
 
 if __name__ == '__main__':
