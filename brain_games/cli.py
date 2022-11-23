@@ -3,8 +3,8 @@ import prompt
 
 def start(rule, func):
     print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}')
+    user = prompt.string('May I have your name? ')
+    print(f'Hello, {user}')
     print(rule)
     for i in range(3):
         question,correct_ans = func()
@@ -13,10 +13,10 @@ def start(rule, func):
         if correct_ans == answer:
             print('Correct!')
             if i == 2:
-                print(f'Congratulations, {name}!')
+                print(f'Congratulations, {user}!')
                 return
 
         else:
             print(f"{answer} is wrong answer ;(. Correct answer was {correct_ans}.")
-            print(f"Let's try again, {name}!")
+            print(f"Let's try again, {user}!")
             return
